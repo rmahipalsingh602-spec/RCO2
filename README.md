@@ -59,3 +59,23 @@ Current backend URL:
 
 `frontend/vercel.json` includes a catch-all rewrite so React Router pages work on refresh.
 `frontend/.env.production` already points the frontend build to the Render backend.
+
+## Android APK via Capacitor
+
+The React frontend is now prepared for Capacitor under [`frontend/capacitor.config.ts`](/workspace/frontend/capacitor.config.ts).
+
+From `frontend/`:
+
+```powershell
+npm install
+$env:CAPACITOR_SERVER_URL="https://your-vercel-app.vercel.app"
+npm run android:sync
+npm run android:open
+```
+
+Notes:
+
+- Set `CAPACITOR_SERVER_URL` to your live Vercel frontend URL if you want the APK to always load the latest hosted app.
+- If you do not set `CAPACITOR_SERVER_URL`, the APK will use the bundled local `dist/` build instead.
+- Build the final APK from Android Studio after `npm run android:open`.
+- On Windows, you can also try a debug APK build with `npm run android:apk:debug`.
