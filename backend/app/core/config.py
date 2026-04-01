@@ -18,6 +18,18 @@ def normalize_database_url(database_url: str | None) -> str:
     return value
 
 
+def to_sync_database_url(database_url: str | None) -> str:
+    value = normalize_database_url(database_url)
+
+    if value.startswith("postgresql+asyncpg://"):
+        return value.replace("postgresql+asyncpg://", "postgresql+psycopg2://", 1)
+
+    if value.startswith("sqlite+aiosqlite:///"):
+        return value.replace("sqlite+aiosqlite:///", "sqlite:///", 1)
+
+    return value
+
+
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(
         env_file=".env",
@@ -97,6 +109,14 @@ class Settings(BaseSettings):
                 unique_origins.append(origin)
 
         return unique_origins
+
+    @property
+    def is_sqlite(self) -> bool:
+        return self.DATABASE_URL.startswith("sqlite")
+
+    @property
+    def alembic_database_url(self) -> str:
+        return to_sync_database_url(self.DATABASE_URL)
 
 settings = Settings()
 

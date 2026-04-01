@@ -12,6 +12,9 @@ Base = declarative_base()
 
 
 async def init_db() -> None:
+    if not settings.is_sqlite:
+        return
+
     # Import models before create_all so SQLAlchemy metadata is populated.
     from .. import models  # noqa: F401
 
