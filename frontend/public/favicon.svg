@@ -1,0 +1,20 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="64" height="64" rx="20" fill="#07100D"/>
+  <circle cx="32" cy="32" r="21" stroke="url(#ring)" stroke-width="3.5" stroke-dasharray="100 18" stroke-linecap="round"/>
+  <path d="M31.8 18.5C24.8 21.1 20.2 27 20.2 33.9C20.2 41.6 24.9 47.8 32 50.5C39 47.8 43.7 41.6 43.7 33.9C43.7 27 39.1 21.1 31.8 18.5Z" fill="url(#leaf)"/>
+  <path d="M23.8 37.3C27.9 35.6 32 31.6 36.2 25.4" stroke="#0B1F16" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M31.8 31.8C33.7 33.2 35.2 35.1 36.2 37.6" stroke="#0B1F16" stroke-width="1.8" stroke-linecap="round"/>
+  <circle cx="16.5" cy="22" r="3.2" fill="#D9FBE8"/>
+  <circle cx="49.2" cy="20.2" r="2.5" fill="#86EFAC"/>
+  <circle cx="47.8" cy="45" r="3.4" fill="#BBF7D0"/>
+  <defs>
+    <linearGradient id="ring" x1="10" y1="10" x2="54" y2="54" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#86EFAC"/>
+      <stop offset="1" stop-color="#34D399"/>
+    </linearGradient>
+    <linearGradient id="leaf" x1="23" y1="18" x2="42" y2="46" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F0FDF4"/>
+      <stop offset="1" stop-color="#86EFAC"/>
+    </linearGradient>
+  </defs>
+</svg>

@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+.venv312/
+
+# Node / frontend build artifacts
+frontend/node_modules/
+frontend/dist/
+frontend/.vercel/
+
+# Local env files
+.env
+backend/.env
+frontend/.env.local
+
+# Local databases and logs
+*.db
+*.sqlite3
+.logs/
+
+# Editor / OS
+.vscode/
+.DS_Store
