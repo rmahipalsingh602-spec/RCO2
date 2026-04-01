@@ -53,8 +53,9 @@ Cookie settings for cross-site auth are already prepared:
 
 Deploy `frontend/` as the Vercel project root.
 
-Required Vercel env var:
+Current backend URL:
 
-- `VITE_API_BASE_URL=https://<your-render-service>.onrender.com`
+- `https://rco2.onrender.com`
 
 `frontend/vercel.json` includes a catch-all rewrite so React Router pages work on refresh.
+`frontend/.env.production` already points the frontend build to the Render backend.
